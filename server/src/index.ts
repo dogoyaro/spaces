@@ -1,6 +1,8 @@
 import {Client} from 'twitter-api-sdk';
 import 'dotenv/config';
+// @ts-ignore
 import express from 'express';
+// @ts-ignore
 import cors from 'cors';
 
 const twitterClient = new Client(process.env.BEARER_TOKEN || '');
