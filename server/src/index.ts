@@ -95,11 +95,14 @@ function stateFilter(state: string) { return { type: 'state', value: state}};
 
 const app = express();
 const port = process.env.PORT;
-const API_URL = `http://localhost:${port}`;
 
 app.use(cors())
 app.use(express.json());
 const defaultState = stateFilter('scheduled');
+
+app.get('/', (req: any, res: any) => {
+    res.send('Hello world');
+});
 
 app.post('/spaces', async (req: any, res: any) => {
     console.log('request received', req.body);
@@ -117,7 +120,7 @@ app.post('/spaces', async (req: any, res: any) => {
 })
 
 app.listen(port, () => {
-  return console.log(`Express is listening at ${API_URL}`);
+  return console.log(`Express is listening on port: ${port}`);
 });
 
 // async function manualRun() {
