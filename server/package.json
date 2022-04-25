@@ -2,7 +2,7 @@
   "name": "spaces",
   "version": "1.0.0",
   "description": "add filter params to twitters default space search",
-  "main": "index.ts",
+  "main": "index.js",
   "author": "yamen & bolu",
   "license": "MIT",
   "dependencies": {

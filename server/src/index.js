@@ -94,7 +94,7 @@ function userFilter(user) { return { type: 'user', value: user }; }
 function stateFilter(state) { return { type: 'state', value: state }; }
 ;
 const app = (0, express_1.default)();
-const port = process.env.PORT;
+const port = process.env.PORT || 8080;
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 const defaultState = stateFilter('scheduled');
