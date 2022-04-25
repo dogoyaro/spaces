@@ -94,7 +94,7 @@ function userFilter(user: string) { return { type: 'user', value: user}};
 function stateFilter(state: string) { return { type: 'state', value: state}};
 
 const app = express();
-const port = 9000;
+const port = process.env.PORT;
 const API_URL = `http://localhost:${port}`;
 
 app.use(cors())
